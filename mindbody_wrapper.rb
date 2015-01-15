@@ -3,6 +3,10 @@ require 'sinatra'
 require 'json'
 require 'mindbody-api'
 
+configure :production do
+  require 'newrelic_rpm'
+end
+
 include MindBody::Services
 
 class MindBody::Models::Base
