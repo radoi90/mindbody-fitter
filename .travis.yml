@@ -1,2 +1,9 @@
 language: ruby
 rvm: 2.2.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: WEYZ4uwCy7EN+4P2+HmNn2RX5PW4XIQok3tpteIishxNHDIuESBbDOm1STwA6JjL7Di9u4N8Y1xgOwTkBluSsvIf+I2QNO2oN/yn3v3B65rvZD661NiT5YnWoHG179ugmsc7LE1sDJTJxWiGCDVjf+owv8mGVl2hhdEgFAj3Y44=
+  app: mindbody-fitter
+  on:
+    repo: radoi90/mindbody-fitter
