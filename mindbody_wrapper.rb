@@ -47,18 +47,10 @@ end
 get '/classes' do
 	# Pass along only the accepted MB parameters
 	query = params.slice(
-		"ClassDescriptionIDs",
 		"ClassIDs",
-		"StaffIDs",
 		"StartDateTime",
 		"EndDateTime",
-		"ClientID",
-		"ProgramIDs",
-		"SessionTypeIDs",
 		"LocationIDs",
-		"SemesterIDs",
-		"HideCanceledClasses",
-		"SchedulingWindow"
 		"PageSize",
 		"CurrentPageIndex"
 	)
