@@ -57,6 +57,7 @@ get '/classes' do
 
 	# Make the MB API call
 	classes = ClassService.get_classes(options=query)
+	response = Array(classes.result[:classes])
 
 	# Build the response
 	content_type :json, 'charset' => 'utf-8'
