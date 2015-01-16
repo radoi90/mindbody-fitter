@@ -67,6 +67,6 @@ get '/classes' do
 	# Build the response
 	content_type :json, 'charset' => 'utf-8'
 	status classes.error_code
-	headers "Result count" => classes.result_count
-	body classes.result[:classes].to_json
+	headers "Result count" => response.size.to_s
+	body response.to_json
 end
