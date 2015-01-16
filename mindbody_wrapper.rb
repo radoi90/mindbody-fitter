@@ -59,6 +59,8 @@ get '/classes' do
 		"SemesterIDs",
 		"HideCanceledClasses",
 		"SchedulingWindow"
+		"PageSize",
+		"CurrentPageIndex"
 	)
 
 	# Make the MB API call
