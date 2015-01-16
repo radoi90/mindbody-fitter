@@ -55,6 +55,10 @@ get '/classes' do
 		"CurrentPageIndex"
 	)
 
+	# For parameters that accept multiple ids, split values and convert to integer
+	query["ClassIDs"] && query["ClassIDs"] = query["ClassIDs"].split(",")
+	query["LocationIDs"] && query["LocationIDs"] = query["LocationIDs"].split(",")
+
 	# Make the MB API call
 	classes = ClassService.get_classes(options=query)
 	response = Array(classes.result[:classes])
