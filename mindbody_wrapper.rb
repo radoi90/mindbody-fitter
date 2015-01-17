@@ -109,18 +109,6 @@ get '/packages' do
 	body response.to_json
 end
 
-get '/sales' do
-	# Make the MB API call
-	sales = SaleService.get_sales()
-	response = Array(sales.result[:sales])
-
-	# Build the response
-	content_type :json, 'charset' => 'utf-8'
-	status sales.error_code
-	headers "Result count" => response.size.to_s
-	body response.to_json
-end
-
 get '/products' do
 	# Make the MB API call
 	products = SaleService.get_products()
@@ -141,6 +129,38 @@ get '/services' do
 	# Build the response
 	content_type :json, 'charset' => 'utf-8'
 	status services.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
+
+get '/clients' do
+	# Pass along only the accepted MB parameters
+	query = params.slice(
+		"ClientIDs",
+		"SearchText",
+		"PageSize",
+		"CurrentPageIndex"
+	)
+
+	# For parameters that accept multiple ids, split values and convert to integer
+	query["ClientIDs"] && query["ClientIDs"] = query["ClientIDs"].split(",")
+
+	# get_clients needs the dev account credentials
+	query["UserCredentials"] = {
+		"Username" => "Siteowner",
+		"Password" => "apitest1234",
+		"SiteIDs" => {
+			"int" => -99
+		}
+ 	}
+
+	# Make the MB API call
+	clients = ClientService.get_clients(options=query)
+	response = Array(clients.result[:clients])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status clients.error_code
 	headers "Result count" => response.size.to_s
 	body response.to_json
 end
