@@ -69,3 +69,33 @@ get '/classes' do
 	headers "Result count" => response.size.to_s
 	body response.to_json
 end
+
+get '/sites' do
+	# Pass along only the accepted MB parameters
+	query = params.slice("PageSize","CurrentPageIndex")
+
+	# Make the MB API call
+	sites = SiteService.get_sites(options=query)
+	response = Array(sites.result[:sites])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status sites.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
+
+get '/locations' do
+	# Pass along only the accepted MB parameters
+	query = params.slice("PageSize","CurrentPageIndex")
+
+	# Make the MB API call
+	locations = SiteService.get_locations(options=query)
+	response = Array(locations.result[:locations])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status locations.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
