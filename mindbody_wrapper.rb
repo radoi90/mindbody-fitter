@@ -86,11 +86,8 @@ get '/sites' do
 end
 
 get '/locations' do
-	# Pass along only the accepted MB parameters
-	query = params.slice("PageSize","CurrentPageIndex")
-
 	# Make the MB API call
-	locations = SiteService.get_locations(options=query)
+	locations = SiteService.get_locations()
 	response = Array(locations.result[:locations])
 
 	# Build the response
