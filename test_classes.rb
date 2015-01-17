@@ -1,6 +1,5 @@
 describe "Mindbody Wrapper Classes" do
 
-	# /classes tests
 	it "should return json to classes" do
 		VCR.insert_cassette 'mindbody-classes'
 

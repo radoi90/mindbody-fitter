@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mindbodyonline.com/0_5/SaleService.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://clients.mindbodyonline.com/api/0_5"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:GetProducts><tns:Request><tns:SourceCredentials><tns:SourceName>HouseQuest</tns:SourceName><tns:Password>fwvGnTrVzv6bz1CL93Qlgvc2e2Y=</tns:Password><tns:SiteIDs><tns:int>-99</tns:int></tns:SiteIDs></tns:SourceCredentials></tns:Request></tns:GetProducts></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://clients.mindbodyonline.com/api/0_5/GetProducts"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '553'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      P3p:
+      - CAO DSP COR CUR TAIa OUR NOR UNI STA
+      Content-Length:
+      - '5040'
+      Date:
+      - Sat, 17 Jan 2015 04:52:23 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetProductsResponse
+        xmlns="http://clients.mindbodyonline.com/api/0_5"><GetProductsResult><Status>Success</Status><ErrorCode>200</ErrorCode><XMLDetail>Full</XMLDetail><ResultCount>12</ResultCount><CurrentPageIndex>0</CurrentPageIndex><TotalPageCount>1</TotalPageCount><Products><Product><Price>120.0000</Price><TaxRate>0.13</TaxRate><ID>000189</ID><GroupID>189</GroupID><Name>Polar
+        Heart Rate Monitor</Name><OnlinePrice>120.0000</OnlinePrice><ShortDesc>FT
+        80 Strength Gaining Guidance</ShortDesc><LongDesc>The FT 80 Guides your strength
+        training with heart rate based recovery periods between sets. Creates a training
+        program based on your personal goals and sets new weekly training targets.The
+        Polar Fitness test measures your aerobic fitness at rest and tells you your
+        progress.</LongDesc><Color><ID>1</ID><Name>None</Name></Color><Size><ID>1</ID><Name>None</Name></Size></Product><Product><Price>45.0000</Price><TaxRate>0.13</TaxRate><ID>000210</ID><GroupID>210</GroupID><Name>CLHC
+        Duffle Bag</Name><OnlinePrice>45.0000</OnlinePrice><Color><ID>1</ID><Name>None</Name></Color><Size><ID>1</ID><Name>None</Name></Size></Product><Product><Price>33.0000</Price><TaxRate>0.13</TaxRate><ID>000592</ID><GroupID>592</GroupID><Name>Foam
+        Rollers</Name><OnlinePrice>33.0000</OnlinePrice><ShortDesc>Round 36" Foam
+        Roller</ShortDesc><LongDesc>these rolls are used during therapy, aquatics
+        or physical fitness as a balance , flexibility and strength training mechanism.</LongDesc><Color><ID>8</ID><Name>Blue/Sapphire</Name></Color><Size><ID>3</ID><Name>Medium</Name></Size></Product><Product><Price>180.0000</Price><TaxRate>0.08</TaxRate><ID>1042</ID><GroupID>1042</GroupID><Name>Bosu
+        Balance Trainer</Name><OnlinePrice>180.0000</OnlinePrice><ShortDesc>Half Ball
+        - Balance Trainer</ShortDesc><Color><ID>9</ID><Name>Brown/Wood</Name></Color><Size><ID>1</ID><Name>None</Name></Size></Product><Product><Price>30.0000</Price><TaxRate>0.13</TaxRate><ID>1064</ID><GroupID>1064</GroupID><Name>3
+        Pack Boxing Hand Wraps</Name><OnlinePrice>30.0000</OnlinePrice><ShortDesc>3
+        pairs of boxing hand wraps.</ShortDesc><LongDesc>Revgear hand wraps are notably
+        the best hand wraps in the world! Sewn in hook and loop fastener for durability.
+        All hand wraps have special thumb loop with markings for correct wrapping.
+        Available in traditional cotton.</LongDesc><Color><ID>1</ID><Name>None</Name></Color><Size><ID>1</ID><Name>None</Name></Size></Product><Product><Price>35.0000</Price><TaxRate>0.13</TaxRate><ID>8662229217</ID><GroupID>1153</GroupID><Name>Zumba
+        T-shirts</Name><OnlinePrice>35.0000</OnlinePrice><ShortDesc>Pink and Black
+        Zumba "Love" T-shirts</ShortDesc><Color><ID>31</ID><Name>Black</Name></Color><Size><ID>1</ID><Name>None</Name></Size></Product><Product><Price>21.9900</Price><TaxRate>0.13</TaxRate><ID>6896728822</ID><GroupID>1158</GroupID><Name>Eco
+        Yoga Mat</Name><OnlinePrice>21.9900</OnlinePrice><ShortDesc>Sticky Eco Friendly
+        Yoga Mat</ShortDesc><LongDesc>These sticky eco friendly yoga mats are as easy
+        on you as they are on the Earth. The 3mm thick cushioning has a unique pattern
+        that provides superior grip, padding and stability</LongDesc><Color><ID>1</ID><Name>None</Name></Color><Size><ID>1</ID><Name>None</Name></Size></Product><Product><Price>19.9900</Price><TaxRate>0.13</TaxRate><ID>8799967470</ID><GroupID>1160</GroupID><Name>Blue
+        Gym Bag</Name><OnlinePrice>19.9900</OnlinePrice><LongDesc>Sports bags not
+        only make it easy to find your stuff after the game: they keep your gym clothes
+        tidy and have room for energy bars and a bottle of water.</LongDesc><Color><ID>1</ID><Name>None</Name></Color><Size><ID>1</ID><Name>None</Name></Size></Product><Product><Price>2.2500</Price><TaxRate>0.18</TaxRate><ID>509056</ID><GroupID>1237</GroupID><Name>500ml
+        Pop</Name><OnlinePrice>2.2500</OnlinePrice><ShortDesc>Pop</ShortDesc><Color><ID>1</ID><Name>None</Name></Color><Size><ID>1</ID><Name>None</Name></Size></Product><Product><Price>2.2500</Price><TaxRate>0.18</TaxRate><ID>509057</ID><GroupID>1238</GroupID><Name>500ml
+        water</Name><OnlinePrice>2.2500</OnlinePrice><Color><ID>1</ID><Name>None</Name></Color><Size><ID>1</ID><Name>None</Name></Size></Product><Product><Price>6.0000</Price><TaxRate>0.08</TaxRate><ID>123456</ID><GroupID>1324</GroupID><Name>Branded
+        mug</Name><OnlinePrice>6.0000</OnlinePrice><ShortDesc>Harrell Rocks Fitness</ShortDesc><Color><ID>14</ID><Name>Aqua/Turquoise</Name></Color><Size><ID>9</ID><Name>Case
+        (32)</Name></Size></Product><Product><Price>100.0000</Price><TaxRate>0.08</TaxRate><ID>123456</ID><GroupID>1420</GroupID><Name>Glove</Name><OnlinePrice>0.0000</OnlinePrice><ShortDesc>Rawlings
+        Gold Glove Series</ShortDesc><Color><ID>1</ID><Name>None</Name></Color><Size><ID>4</ID><Name>Large</Name></Size></Product></Products></GetProductsResult></GetProductsResponse></soap:Body></soap:Envelope>'
+    http_version: 
+  recorded_at: Sat, 17 Jan 2015 04:52:28 GMT
+recorded_with: VCR 2.9.3

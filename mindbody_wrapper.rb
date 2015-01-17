@@ -96,3 +96,51 @@ get '/locations' do
 	headers "Result count" => response.size.to_s
 	body response.to_json
 end
+
+get '/packages' do
+	# Make the MB API call
+	packages = SaleService.get_packages()
+	response = Array(packages.result[:packages])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status packages.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
+
+get '/sales' do
+	# Make the MB API call
+	sales = SaleService.get_sales()
+	response = Array(sales.result[:sales])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status sales.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
+
+get '/products' do
+	# Make the MB API call
+	products = SaleService.get_products()
+	response = Array(products.result[:products])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status products.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
+
+get '/services' do
+	# Make the MB API call
+	services = SaleService.get_services()
+	response = Array(services.result[:services])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status services.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end

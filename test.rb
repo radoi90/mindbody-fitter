@@ -8,6 +8,7 @@ require_relative 'mindbody_wrapper.rb'
 
 require_relative 'test_classes.rb'
 require_relative 'test_sites.rb'
+require_relative 'test_sales.rb'
 
 include Rack::Test::Methods
 
