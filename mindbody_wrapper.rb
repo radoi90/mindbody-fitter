@@ -164,3 +164,99 @@ get '/clients' do
 	headers "Result count" => response.size.to_s
 	body response.to_json
 end
+
+get '/clients/services' do
+	# Pass along only the accepted MB parameters
+	query = params.slice(
+		"ClientID",
+		"StartDate",
+		"EndDate"
+	)
+
+	unless query["ClientID"]
+		return [400, {"Content-Type"=>'application/json;charset=utf-8'}, 
+			{error_message: "Bad Request: ClientID required."}.to_json]
+	end
+
+	# Make the MB API call
+	client_services = ClientService.get_client_services(options=query)
+	response = Array(client_services.result[:services])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status client_services.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
+
+get '/clients/visits' do
+	# Pass along only the accepted MB parameters
+	query = params.slice(
+		"ClientID",
+		"StartDate",
+		"EndDate"
+	)
+
+	unless query["ClientID"]
+		return [400, {"Content-Type"=>'application/json;charset=utf-8'}, 
+			{error_message: "Bad Request: ClientID required."}.to_json]
+	end
+
+	# Make the MB API call
+	client_visits = ClientService.get_client_visits(options=query)
+	response = Array(client_visits.result[:visits])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status client_visits.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
+
+get '/clients/purchases' do
+	# Pass along only the accepted MB parameters
+	query = params.slice(
+		"ClientID",
+		"StartDate",
+		"EndDate"
+	)
+
+	unless query["ClientID"]
+		return [400, {"Content-Type"=>'application/json;charset=utf-8'}, 
+			{error_message: "Bad Request: ClientID required."}.to_json]
+	end
+
+	# Make the MB API call
+	client_purchases = ClientService.get_client_purchases(options=query)
+	response = Array(client_purchases.result[:purchases])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status client_purchases.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
+
+get '/clients/schedule' do
+	# Pass along only the accepted MB parameters
+	query = params.slice(
+		"ClientID",
+		"StartDate",
+		"EndDate"
+	)
+
+	unless query["ClientID"]
+		return [400, {"Content-Type"=>'application/json;charset=utf-8'}, 
+			{error_message: "Bad Request: ClientID required."}.to_json]
+	end
+
+	# Make the MB API call
+	client_schedule = ClientService.get_client_schedule(options=query)
+	response = Array(client_schedule.result[:visits])
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status client_schedule.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
