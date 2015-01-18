@@ -1,0 +1,82 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mindbodyonline.com/0_5/ClassService.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://clients.mindbodyonline.com/api/0_5"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:AddClientsToClasses><tns:Request><tns:SourceCredentials><tns:SourceName>HouseQuest</tns:SourceName><tns:Password>fwvGnTrVzv6bz1CL93Qlgvc2e2Y=</tns:Password><tns:SiteIDs><tns:int>-99</tns:int></tns:SiteIDs></tns:SourceCredentials><tns:ClientID>1</tns:ClientID><tns:ClassIDs><tns:int>1</tns:int></tns:ClassIDs><tns:Test>true</tns:Test><tns:RequirePayment>false</tns:RequirePayment><tns:ClientIDs><tns:string>1</tns:string></tns:ClientIDs></tns:Request></tns:AddClientsToClasses></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://clients.mindbodyonline.com/api/0_5/AddClientsToClasses"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '776'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      P3p:
+      - CAO DSP COR CUR TAIa OUR NOR UNI STA
+      Content-Length:
+      - '4644'
+      Date:
+      - Sun, 18 Jan 2015 05:02:05 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><AddClientsToClassesResponse
+        xmlns=\"http://clients.mindbodyonline.com/api/0_5\"><AddClientsToClassesResult><Status>FailedAction</Status><ErrorCode>201</ErrorCode><Message>An
+        action has failed. Please see object message for details.</Message><XMLDetail>Full</XMLDetail><ResultCount>0</ResultCount><CurrentPageIndex>0</CurrentPageIndex><TotalPageCount>0</TotalPageCount><Classes><Class><ClassScheduleID>183</ClassScheduleID><Clients><Client><Messages><string>Client
+        is outside scheduling window.\r\n  Client is outside scheduling window.\r\n</string></Messages><ErrorCode>602</ErrorCode><AppointmentGenderPreference>None</AppointmentGenderPreference><Gender>Female</Gender><IsCompany>false</IsCompany><LiabilityRelease>false</LiabilityRelease><PromotionalEmailOptIn>false</PromotionalEmailOptIn><Action>Failed</Action><ID>1</ID><FirstName>Walk-in</FirstName><MiddleName>DO
+        NOT DELETE</MiddleName><LastName>Walk-in</LastName><Email>mbosoftware@mbosoftware.com
+        </Email><EmailOptIn>false</EmailOptIn><AddressLine1>1234 Elmwood Street</AddressLine1><City>San
+        Luis Obispo</City><State>CA</State><PostalCode>93401</PostalCode><Country>US</Country><MobilePhone>222-333-4141</MobilePhone><HomePhone>222-333-4141</HomePhone><WorkPhone>222-333-4141</WorkPhone><BirthDate
+        xsi:nil=\"true\" /><FirstAppointmentDate xsi:nil=\"true\" /><HomeLocation><SiteID>-99</SiteID><BusinessDescription>\"The
+        MINDBODY Health Club Demo is awesome.\" - Anonymous (but probably someone
+        cool and smart)</BusinessDescription><AdditionalImageURLs /><FacilitySquareFeet
+        xsi:nil=\"true\" /><TreatmentRooms xsi:nil=\"true\" /><HasClasses>false</HasClasses><PhoneExtension
+        /><ID>1</ID><Name>Clubville</Name><Address>4051 S Broad St</Address><Address2>San
+        Luis Obispo, CA 93401</Address2><Tax1>0.08</Tax1><Tax2>0.05</Tax2><Tax3>0.05</Tax3><Tax4>0</Tax4><Tax5>0</Tax5><Phone>8777554279</Phone><City>San
+        Luis Obispo</City><StateProvCode>CA</StateProvCode><PostalCode>93401</PostalCode><Latitude>35.2470788</Latitude><Longitude>-120.6426145</Longitude></HomeLocation><IsProspect>false</IsProspect></Client></Clients><Location><SiteID>-99</SiteID><BusinessDescription>\"The
+        MINDBODY Health Club Demo is awesome.\" - Anonymous (but probably someone
+        cool and smart)</BusinessDescription><AdditionalImageURLs /><FacilitySquareFeet
+        xsi:nil=\"true\" /><TreatmentRooms xsi:nil=\"true\" /><HasClasses>false</HasClasses><PhoneExtension
+        /><ID>1</ID><Name>Clubville</Name><Address>4051 S Broad St</Address><Address2>San
+        Luis Obispo, CA 93401</Address2><Tax1>0.08</Tax1><Tax2>0.05</Tax2><Tax3>0.05</Tax3><Tax4>0</Tax4><Tax5>0</Tax5><Phone>8777554279</Phone><City>San
+        Luis Obispo</City><StateProvCode>CA</StateProvCode><PostalCode>93401</PostalCode><Latitude>35.2470788</Latitude><Longitude>-120.6426145</Longitude></Location><MaxCapacity
+        xsi:nil=\"true\" /><WebCapacity xsi:nil=\"true\" /><TotalBooked xsi:nil=\"true\"
+        /><TotalBookedWaitlist xsi:nil=\"true\" /><WebBooked xsi:nil=\"true\" /><SemesterID
+        xsi:nil=\"true\" /><IsCanceled>false</IsCanceled><Substitute>false</Substitute><Active>true</Active><IsWaitlistAvailable>false</IsWaitlistAvailable><IsEnrolled>false</IsEnrolled><HideCancel>false</HideCancel><ID>1</ID><IsAvailable>false</IsAvailable><StartDateTime>2009-05-02T12:10:00</StartDateTime><EndDateTime>2009-05-02T12:55:00</EndDateTime><ClassDescription><Level><ID>7</ID><Name>Beginner</Name></Level><ID>50</ID><Name>Revolution
+        1 - Beginner</Name><Description>A cycling experience designed for the beginner
+        looking to enhance his/her working knowledge of indoor cycling and increase
+        physical stamina. An excellent stepping stone to other Revolution workouts,
+        this entry level session will have limited standing positions, with adequate
+        recovery periods. Cardio segment is approximately 20 minutes.</Description><Prereq
+        /><Notes /><LastUpdated>2010-06-16T08:51:41</LastUpdated><Program><ID>12</ID><Name>Membership</Name><ScheduleType>DropIn</ScheduleType><CancelOffset>0</CancelOffset></Program><SessionType><DefaultTimeLength
+        xsi:nil=\"true\" /><ProgramID>12</ProgramID><NumDeducted>1</NumDeducted><ID>10</ID><Name>Cycling</Name></SessionType></ClassDescription><Staff><MobilePhone>5199429294</MobilePhone><HomePhone>5192083779</HomePhone><State>0</State><ID>100000001</ID><Name>Jackie
+        M Hadad</Name><FirstName>Jackie M</FirstName><LastName>Hadad</LastName><Bio>
+        </Bio><isMale>false</isMale></Staff></Class></Classes></AddClientsToClassesResult></AddClientsToClassesResponse></soap:Body></soap:Envelope>"
+    http_version: 
+  recorded_at: Sun, 18 Jan 2015 05:02:05 GMT
+recorded_with: VCR 2.9.3

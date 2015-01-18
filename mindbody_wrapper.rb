@@ -19,6 +19,10 @@ class MindBody::Models::Base
 	end
 end
 
+class MindBody::Services::ClassService
+      operation :add_clients_to_classes
+end
+
 get '/' do
 	stevie_j_quotes = [
 		"Don’t let the noise of others’ opinions drown out your own inner voice.",
@@ -66,6 +70,38 @@ get '/classes' do
 	# Build the response
 	content_type :json, 'charset' => 'utf-8'
 	status classes.error_code
+	headers "Result count" => response.size.to_s
+	body response.to_json
+end
+
+get '/classes/add_client' do
+	# Pass along only the accepted MB parameters
+	query = params.slice(
+		"ClientID",
+		"ClassIDs",
+		"Test",
+		"RequirePayment"
+	)
+
+	unless query["ClientID"] && query["ClassIDs"] && query["Test"] && query["RequirePayment"]
+		return [400, {"Content-Type" => 'application/json;charset=utf-8'},
+			{error_message: "ClientID, ClassIDs, Test, RequirePayment required."}.to_json]
+	end
+
+	# Massage parameters
+	query["ClientIDs"] = {"string" => query["ClientID"] }
+	query["ClassIDs"] = query["ClassIDs"].split(",")
+
+	puts 'here'
+	puts query
+
+	# Make the MB API call
+	booked_classes = ClassService.add_clients_to_classes(options=query)
+	response = booked_classes.result[:classes]
+
+	# Build the response
+	content_type :json, 'charset' => 'utf-8'
+	status booked_classes.error_code
 	headers "Result count" => response.size.to_s
 	body response.to_json
 end
@@ -175,7 +211,7 @@ get '/clients/services' do
 
 	unless query["ClientID"]
 		return [400, {"Content-Type"=>'application/json;charset=utf-8'}, 
-			{error_message: "Bad Request: ClientID required."}.to_json]
+			{error_message: "ClientID required."}.to_json]
 	end
 
 	# Make the MB API call

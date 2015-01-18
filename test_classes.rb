@@ -45,4 +45,26 @@ describe "Mindbody Wrapper Classes" do
 
 		VCR.eject_cassette
 	end
+
+	it "should return json to /classes/add_client" do
+		VCR.insert_cassette 'mindbody-classes-add-client'
+
+		get '/classes/add_client'
+		last_response.headers['Content-Type'].must_equal 'application/json;charset=utf-8'
+
+		VCR.eject_cassette
+	end
+
+	it "should return a message if booking can't be made" do
+		VCR.insert_cassette 'mindbody-classes-add-client-error'
+
+		get '/classes/add_client?Test=true&RequirePayment=false&ClientID=1&ClassIDs=1'
+		
+		reply_body = JSON.parse(last_response.body)
+		puts 'debugging here'
+		puts reply_body
+		reply_body["clients"]["messages"].wont_be_nil
+
+		VCR.eject_cassette
+	end
 end
