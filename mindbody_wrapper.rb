@@ -42,7 +42,8 @@ get '/' do
 		"Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.",
 		"Stay hungry, stay foolish.",
 		"Computers themselves, and software yet to be developed, will revolutionize the way we learn.",
-		"Design is a funny word. Some people think design means how it looks. But of course, if you dig deeper, it's really how it works."
+		"Design is a funny word. Some people think design means how it looks. But of course, if you dig deeper, it's really how it works.",
+		"There's one more thing..."
 	]
 
 	stevie_j_quotes.sample + " - Steve Jobs"
