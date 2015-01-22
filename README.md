@@ -1,6 +1,6 @@
 # mindbody-integration
 
-[![Build Status](https://magnum.travis-ci.com/radoi90/mindbody-fitter.svg)](https://magnum.travis-ci.com/radoi90/mindbody-fitter)
+[![Build Status](https://magnum.travis-ci.com/radoi90/mindbody-fitter.svg?token=h7yztF3b263no45wNybc&branch=master)](https://magnum.travis-ci.com/radoi90/mindbody-fitter)
 [![Code Climate](https://codeclimate.com/github/nickcharlton/urbanscraper/badges/gpa.svg)](https://codeclimate.com/github/nickcharlton/urbanscraper)
 [![Test Coverage](https://codeclimate.com/github/nickcharlton/urbanscraper/badges/coverage.svg)](https://codeclimate.com/github/nickcharlton/urbanscraper)
 [![Dependency Status](https://gemnasium.com/nickcharlton/urbanscraper.svg)](https://gemnasium.com/nickcharlton/urbanscraper)
