@@ -32,7 +32,22 @@ module MindBody
   end
 end
 
+#
+# Filters
+#
+before do
+  # we'll always return json
+  content_type :json, 'charset' => 'utf-8'
+end
+
+#
+# Documentation
+#
 get '/' do
+  # in this case, json isn't appropriate
+  content_type :html
+
+  markdown :home
 end
 
 get '/classes' do
@@ -55,38 +70,34 @@ get '/classes' do
   response = Array(classes.result[:classes])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status classes.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
 end
 
-get '/classes/add_client' do
+post '/classes/:class_id/add_client/:client_id' do
   # Pass along only the accepted MB parameters
   query = params.slice(
-    'ClientID',
-    'ClassIDs',
     'Test',
     'RequirePayment'
   )
 
-  unless query['ClientID'] &&
-         query['ClassIDs'] &&
+  unless params[:class_id] &&
+         params[:client_id] &&
          query['Test'] &&
          query['RequirePayment']
     return [
       400,
-      {
-        'Content-Type' => 'application/json;charset=utf-8'
-      },
+      { 'Content-Type' => 'application/json;charset=utf-8' },
       {
         error_message: 'ClientID, ClassIDs, Test, RequirePayment required.'
-      }.to_json]
+      }.to_json
+    ]
   end
 
   # Massage parameters
-  query['ClientIDs'] = { 'string' => query['ClientID'] }
-  query['ClassIDs'] = query['ClassIDs'].split(',')
+  query['ClientIDs'] = { 'string' => params[:client_id] }
+  query['ClassIDs'] = Array(params[:class_id])
 
   puts 'here'
   puts query
@@ -96,7 +107,6 @@ get '/classes/add_client' do
   response = booked_classes.result[:classes]
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status booked_classes.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
@@ -111,7 +121,6 @@ get '/sites' do
   response = Array(sites.result[:sites])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status sites.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
@@ -123,7 +132,6 @@ get '/locations' do
   response = Array(locations.result[:locations])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status locations.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
@@ -135,7 +143,6 @@ get '/packages' do
   response = Array(packages.result[:packages])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status packages.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
@@ -147,7 +154,6 @@ get '/products' do
   response = Array(products.result[:products])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status products.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
@@ -159,7 +165,6 @@ get '/services' do
   response = Array(services.result[:services])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status services.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
@@ -191,7 +196,6 @@ get '/clients' do
   response = Array(clients.result[:clients])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status clients.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
@@ -218,7 +222,6 @@ get '/clients/services' do
   response = Array(client_services.result[:services])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status client_services.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
@@ -245,7 +248,6 @@ get '/clients/visits' do
   response = Array(client_visits.result[:visits])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status client_visits.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
@@ -272,7 +274,6 @@ get '/clients/purchases' do
   response = Array(client_purchases.result[:purchases])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status client_purchases.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
@@ -299,7 +300,6 @@ get '/clients/schedule' do
   response = Array(client_schedule.result[:visits])
 
   # Build the response
-  content_type :json, 'charset' => 'utf-8'
   status client_schedule.error_code
   headers 'Result count' => response.size.to_s
   body response.to_json
