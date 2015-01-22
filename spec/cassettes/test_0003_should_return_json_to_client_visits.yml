@@ -7,14 +7,14 @@ http_interactions:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://clients.mindbodyonline.com/api/0_5"
-        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:GetClients><tns:Request><tns:SourceCredentials><tns:SourceName>HouseQuest</tns:SourceName><tns:Password>fwvGnTrVzv6bz1CL93Qlgvc2e2Y=</tns:Password><tns:SiteIDs><tns:int>-99</tns:int></tns:SiteIDs></tns:SourceCredentials><tns:UserCredentials><tns:Username>Siteowner</tns:Username><tns:Password>apitest1234</tns:Password><tns:SiteIDs><tns:int>-99</tns:int></tns:SiteIDs></tns:UserCredentials></tns:Request></tns:GetClients></env:Body></env:Envelope>
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:GetClientVisits><tns:Request><tns:SourceCredentials><tns:SourceName>HouseQuest</tns:SourceName><tns:Password>fwvGnTrVzv6bz1CL93Qlgvc2e2Y=</tns:Password><tns:SiteIDs><tns:int>-99</tns:int></tns:SiteIDs></tns:SourceCredentials><tns:ClientID><tns:ClientID>1</tns:ClientID></tns:ClientID></tns:Request></tns:GetClientVisits></env:Body></env:Envelope>
     headers:
       Soapaction:
-      - '"http://clients.mindbodyonline.com/api/0_5/GetClients"'
+      - '"http://clients.mindbodyonline.com/api/0_5/GetClientVisits"'
       Content-Type:
       - text/xml;charset=UTF-8
       Content-Length:
-      - '721'
+      - '620'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -37,17 +37,17 @@ http_interactions:
       P3p:
       - CAO DSP COR CUR TAIa OUR NOR UNI STA
       Content-Length:
-      - '562'
+      - '581'
       Date:
-      - Thu, 22 Jan 2015 21:14:32 GMT
+      - Thu, 22 Jan 2015 21:19:09 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetClientsResponse
-        xmlns="http://clients.mindbodyonline.com/api/0_5"><GetClientsResult><Status>Success</Status><ErrorCode>200</ErrorCode><XMLDetail>Full</XMLDetail><ResultCount>0</ResultCount><CurrentPageIndex>0</CurrentPageIndex><TotalPageCount>0</TotalPageCount><Clients
-        /></GetClientsResult></GetClientsResponse></soap:Body></soap:Envelope>
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetClientVisitsResponse
+        xmlns="http://clients.mindbodyonline.com/api/0_5"><GetClientVisitsResult><Status>Success</Status><ErrorCode>200</ErrorCode><XMLDetail>Full</XMLDetail><ResultCount>0</ResultCount><CurrentPageIndex>0</CurrentPageIndex><TotalPageCount>0</TotalPageCount><Visits
+        /></GetClientVisitsResult></GetClientVisitsResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Thu, 22 Jan 2015 21:14:32 GMT
+  recorded_at: Thu, 22 Jan 2015 21:19:09 GMT
 recorded_with: VCR 2.9.3

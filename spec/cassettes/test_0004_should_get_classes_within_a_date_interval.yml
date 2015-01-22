@@ -37,9 +37,9 @@ http_interactions:
       P3p:
       - CAO DSP COR CUR TAIa OUR NOR UNI STA
       Content-Length:
-      - '4471'
+      - '4696'
       Date:
-      - Thu, 22 Jan 2015 18:26:04 GMT
+      - Thu, 22 Jan 2015 21:14:35 GMT
       Connection:
       - keep-alive
     body:
@@ -55,11 +55,11 @@ http_interactions:
         Luis Obispo</City><StateProvCode>CA</StateProvCode><PostalCode>93401</PostalCode><Latitude>35.2470788</Latitude><Longitude>-120.6426145</Longitude></Location><MaxCapacity
         xsi:nil="true" /><WebCapacity xsi:nil="true" /><TotalBooked xsi:nil="true"
         /><TotalBookedWaitlist xsi:nil="true" /><WebBooked xsi:nil="true" /><SemesterID
-        xsi:nil="true" /><IsCanceled>false</IsCanceled><Substitute>false</Substitute><Active>true</Active><IsWaitlistAvailable>false</IsWaitlistAvailable><IsEnrolled>false</IsEnrolled><HideCancel>false</HideCancel><ID>20437</ID><IsAvailable>false</IsAvailable><StartDateTime>2015-01-22T06:20:00</StartDateTime><EndDateTime>2015-01-22T07:20:00</EndDateTime><ClassDescription><Level><ID>7</ID><Name>Beginner</Name></Level><ID>223</ID><Name>Yoga</Name><Description>&lt;div&gt;Yoga
-        Introduction&lt;/div&gt;</Description><Prereq /><Notes /><LastUpdated>2014-12-28T15:23:59.817</LastUpdated><Program><ID>27</ID><Name>Classes</Name><ScheduleType>DropIn</ScheduleType><CancelOffset>0</CancelOffset></Program><SessionType><DefaultTimeLength
+        xsi:nil="true" /><IsCanceled>false</IsCanceled><Substitute>true</Substitute><Active>true</Active><IsWaitlistAvailable>false</IsWaitlistAvailable><IsEnrolled>false</IsEnrolled><HideCancel>false</HideCancel><ID>20437</ID><IsAvailable>false</IsAvailable><StartDateTime>2015-01-22T06:20:00</StartDateTime><EndDateTime>2015-01-22T07:20:00</EndDateTime><ClassDescription><Level><ID>7</ID><Name>Beginner</Name></Level><ID>223</ID><Name>Yoga</Name><Description>&lt;div&gt;Hatha
+        yoga&lt;/div&gt;</Description><Prereq /><Notes /><LastUpdated>2015-01-22T15:36:26.037</LastUpdated><Program><ID>27</ID><Name>Classes</Name><ScheduleType>DropIn</ScheduleType><CancelOffset>0</CancelOffset></Program><SessionType><DefaultTimeLength
         xsi:nil="true" /><ProgramID>27</ProgramID><NumDeducted>1</NumDeducted><ID>250</ID><Name>Hatha
-        Yoga</Name></SessionType></ClassDescription><Staff><State>0</State><Country>US</Country><ID>100000285</ID><Name>Staff</Name><FirstName>Staff</FirstName><LastName>Staff</LastName><Bio>
-        </Bio><isMale>false</isMale></Staff></Class><Class><ClassScheduleID>2152</ClassScheduleID><Location><SiteID>-99</SiteID><BusinessDescription>"The
+        Yoga</Name></SessionType></ClassDescription><Staff><State /><Country>US</Country><ID>100000291</ID><Name>Jana
+        Fit</Name><FirstName>Jana</FirstName><LastName>Fit</LastName><isMale>false</isMale></Staff></Class><Class><ClassScheduleID>2152</ClassScheduleID><Location><SiteID>-99</SiteID><BusinessDescription>"The
         MINDBODY Health Club Demo is awesome." - Anonymous (but probably someone cool
         and smart)</BusinessDescription><AdditionalImageURLs /><FacilitySquareFeet
         xsi:nil="true" /><TreatmentRooms xsi:nil="true" /><HasClasses>false</HasClasses><PhoneExtension
@@ -68,11 +68,13 @@ http_interactions:
         Luis Obispo</City><StateProvCode>CA</StateProvCode><PostalCode>93401</PostalCode><Latitude>35.2470788</Latitude><Longitude>-120.6426145</Longitude></Location><MaxCapacity
         xsi:nil="true" /><WebCapacity xsi:nil="true" /><TotalBooked xsi:nil="true"
         /><TotalBookedWaitlist xsi:nil="true" /><WebBooked xsi:nil="true" /><SemesterID
-        xsi:nil="true" /><IsCanceled>false</IsCanceled><Substitute>false</Substitute><Active>true</Active><IsWaitlistAvailable>true</IsWaitlistAvailable><IsEnrolled>false</IsEnrolled><HideCancel>false</HideCancel><ID>19417</ID><IsAvailable>false</IsAvailable><StartDateTime>2015-01-23T06:20:00</StartDateTime><EndDateTime>2015-01-23T07:20:00</EndDateTime><ClassDescription><Level><ID>7</ID><Name>Beginner</Name></Level><ID>223</ID><Name>Yoga</Name><Description>&lt;div&gt;Yoga
-        Introduction&lt;/div&gt;</Description><Prereq /><Notes /><LastUpdated>2014-12-28T15:23:59.817</LastUpdated><Program><ID>27</ID><Name>Classes</Name><ScheduleType>DropIn</ScheduleType><CancelOffset>0</CancelOffset></Program><SessionType><DefaultTimeLength
+        xsi:nil="true" /><IsCanceled>false</IsCanceled><Substitute>true</Substitute><Active>true</Active><IsWaitlistAvailable>true</IsWaitlistAvailable><IsEnrolled>false</IsEnrolled><HideCancel>false</HideCancel><ID>19417</ID><IsAvailable>false</IsAvailable><StartDateTime>2015-01-23T06:20:00</StartDateTime><EndDateTime>2015-01-23T07:20:00</EndDateTime><ClassDescription><Level><ID>7</ID><Name>Beginner</Name></Level><ID>223</ID><Name>Yoga</Name><Description>&lt;div&gt;Hatha
+        yoga&lt;/div&gt;</Description><Prereq /><Notes /><LastUpdated>2015-01-22T15:36:26.037</LastUpdated><Program><ID>27</ID><Name>Classes</Name><ScheduleType>DropIn</ScheduleType><CancelOffset>0</CancelOffset></Program><SessionType><DefaultTimeLength
         xsi:nil="true" /><ProgramID>27</ProgramID><NumDeducted>1</NumDeducted><ID>250</ID><Name>Hatha
-        Yoga</Name></SessionType></ClassDescription><Staff><State>0</State><Country>US</Country><ID>100000285</ID><Name>Staff</Name><FirstName>Staff</FirstName><LastName>Staff</LastName><Bio>
-        </Bio><isMale>false</isMale></Staff></Class></Classes></GetClassesResult></GetClassesResponse></soap:Body></soap:Envelope>
+        Yoga</Name></SessionType></ClassDescription><Staff><Email>mobile@test.com</Email><MobilePhone>5198976873</MobilePhone><HomePhone>5197419754</HomePhone><WorkPhone>3106335050</WorkPhone><Address>912
+        Erinbrook Crescent</Address><City>Waterloo</City><State>CA</State><Country>US</Country><PostalCode>N2E3M2</PostalCode><ID>100000058</ID><Name>Diana
+        Duff</Name><FirstName>Diana</FirstName><LastName>Duff</LastName><Bio>Diana
+        is an excellent swimmer!!</Bio><isMale>true</isMale></Staff></Class></Classes></GetClassesResult></GetClassesResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Thu, 22 Jan 2015 18:26:04 GMT
+  recorded_at: Thu, 22 Jan 2015 21:14:35 GMT
 recorded_with: VCR 2.9.3

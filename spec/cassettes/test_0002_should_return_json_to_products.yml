@@ -39,7 +39,7 @@ http_interactions:
       Content-Length:
       - '5040'
       Date:
-      - Thu, 22 Jan 2015 18:26:06 GMT
+      - Thu, 22 Jan 2015 21:14:33 GMT
       Connection:
       - keep-alive
     body:
@@ -79,5 +79,5 @@ http_interactions:
         (32)</Name></Size></Product><Product><Price>100.0000</Price><TaxRate>0.08</TaxRate><ID>123456</ID><GroupID>1420</GroupID><Name>Glove</Name><OnlinePrice>0.0000</OnlinePrice><ShortDesc>Rawlings
         Gold Glove Series</ShortDesc><Color><ID>1</ID><Name>None</Name></Color><Size><ID>4</ID><Name>Large</Name></Size></Product></Products></GetProductsResult></GetProductsResponse></soap:Body></soap:Envelope>'
     http_version: 
-  recorded_at: Thu, 22 Jan 2015 18:26:06 GMT
+  recorded_at: Thu, 22 Jan 2015 21:14:33 GMT
 recorded_with: VCR 2.9.3

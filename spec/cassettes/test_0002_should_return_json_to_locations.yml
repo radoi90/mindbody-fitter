@@ -39,7 +39,7 @@ http_interactions:
       Content-Length:
       - '2580'
       Date:
-      - Thu, 22 Jan 2015 18:26:02 GMT
+      - Thu, 22 Jan 2015 21:14:39 GMT
       Connection:
       - keep-alive
     body:
@@ -67,5 +67,5 @@ http_interactions:
         /><StateProvCode /><PostalCode /><Latitude xsi:nil="true" /><Longitude xsi:nil="true"
         /></Location></Locations></GetLocationsResult></GetLocationsResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Thu, 22 Jan 2015 18:26:02 GMT
+  recorded_at: Thu, 22 Jan 2015 21:14:39 GMT
 recorded_with: VCR 2.9.3
