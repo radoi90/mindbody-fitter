@@ -37,23 +37,20 @@ http_interactions:
       P3p:
       - CAO DSP COR CUR TAIa OUR NOR UNI STA
       Content-Length:
-      - '1867'
+      - '1306'
       Date:
-      - Sat, 17 Jan 2015 04:57:32 GMT
+      - Thu, 22 Jan 2015 18:26:07 GMT
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetServicesResponse
-        xmlns="http://clients.mindbodyonline.com/api/0_5"><GetServicesResult><Status>Success</Status><ErrorCode>200</ErrorCode><XMLDetail>Full</XMLDetail><ResultCount>7</ResultCount><CurrentPageIndex>0</CurrentPageIndex><TotalPageCount>1</TotalPageCount><Services><Service><Price>200.0000</Price><OnlinePrice>200.0000</OnlinePrice><TaxRate>0</TaxRate><ProductID>1192</ProductID><ID>1192</ID><Name>Six
-        Week Bootcamp</Name><Count>6</Count></Service><Service><Price>55.0000</Price><OnlinePrice>55.0000</OnlinePrice><TaxRate>0</TaxRate><ProductID>1300</ProductID><ID>1300</ID><Name>5
-        Class Card</Name><Count>5</Count></Service><Service><Price>130.0000</Price><OnlinePrice>130.0000</OnlinePrice><TaxRate>0</TaxRate><ProductID>1357</ProductID><ID>123456789</ID><Name>1
-        Month Unlimited</Name><Count>99999</Count></Service><Service><Price>100.0000</Price><OnlinePrice>100.0000</OnlinePrice><TaxRate>0.08</TaxRate><ProductID>1364</ProductID><ID>1364</ID><Name>10
-        Class Card</Name><Count>10</Count></Service><Service><Price>100.0000</Price><OnlinePrice>100.0000</OnlinePrice><TaxRate>0</TaxRate><ProductID>1408</ProductID><ID>1408</ID><Name>90
+        xmlns="http://clients.mindbodyonline.com/api/0_5"><GetServicesResult><Status>Success</Status><ErrorCode>200</ErrorCode><XMLDetail>Full</XMLDetail><ResultCount>4</ResultCount><CurrentPageIndex>0</CurrentPageIndex><TotalPageCount>1</TotalPageCount><Services><Service><Price>200.0000</Price><OnlinePrice>200.0000</OnlinePrice><TaxRate>0</TaxRate><ProductID>1192</ProductID><ID>1192</ID><Name>Six
+        Week Bootcamp</Name><Count>6</Count></Service><Service><Price>100.0000</Price><OnlinePrice>100.0000</OnlinePrice><TaxRate>0</TaxRate><ProductID>1408</ProductID><ID>1408</ID><Name>90
         min Reservation</Name><Count>1</Count></Service><Service><Price>0.0000</Price><OnlinePrice>0.0000</OnlinePrice><TaxRate>0</TaxRate><ProductID>1418</ProductID><ID>1418</ID><Name>Personal
-        Training Consult</Name><Count>1</Count></Service><Service><Price>195.0000</Price><OnlinePrice>195.0000</OnlinePrice><TaxRate>0</TaxRate><ProductID>1419</ProductID><ID>1419</ID><Name>World
-        Membership</Name><Count>99999</Count></Service></Services></GetServicesResult></GetServicesResponse></soap:Body></soap:Envelope>
+        Training Consult</Name><Count>1</Count></Service><Service><Price>10.0000</Price><OnlinePrice>10.0000</OnlinePrice><TaxRate>0</TaxRate><ProductID>1426</ProductID><ID>1426</ID><Name>class
+        option</Name><Count>1</Count></Service></Services></GetServicesResult></GetServicesResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Sat, 17 Jan 2015 04:57:37 GMT
+  recorded_at: Thu, 22 Jan 2015 18:26:07 GMT
 recorded_with: VCR 2.9.3
