@@ -1,5 +1,8 @@
 language: ruby
 rvm: 2.2.0
+addons:
+  code_climate:
+    repo_token: 5dceab9ba61a89f0bf31f86172389faadc7fc1a48c464fa3342798007d9b517f
 deploy:
   provider: heroku
   api_key:
