@@ -82,10 +82,7 @@ post '/classes/:class_id/add_client/:client_id' do
     'RequirePayment'
   )
 
-  unless params[:class_id] &&
-         params[:client_id] &&
-         query['Test'] &&
-         query['RequirePayment']
+  unless query['Test'] && query['RequirePayment']
     return [
       400,
       { 'Content-Type' => 'application/json;charset=utf-8' },
@@ -98,9 +95,6 @@ post '/classes/:class_id/add_client/:client_id' do
   # Massage parameters
   query['ClientIDs'] = { 'string' => params[:client_id] }
   query['ClassIDs'] = Array(params[:class_id])
-
-  puts 'here'
-  puts query
 
   # Make the MB API call
   booked_classes = ClassService.add_clients_to_classes(query)
@@ -201,21 +195,10 @@ get '/clients' do
   body response.to_json
 end
 
-get '/clients/services' do
+get '/clients/:client_id/services' do
   # Pass along only the accepted MB parameters
-  query = params.slice(
-    'ClientID',
-    'StartDate',
-    'EndDate'
-  )
-
-  unless query['ClientID']
-    return[
-      400,
-      { 'Content-Type' => 'application/json;charset=utf-8' },
-      { error_message: 'ClientID required.' }.to_json
-    ]
-  end
+  query = params.slice('StartDate', 'EndDate')
+  query['ClientID'] = params[:client_id]
 
   # Make the MB API call
   client_services = ClientService.get_client_services(query)
@@ -227,21 +210,10 @@ get '/clients/services' do
   body response.to_json
 end
 
-get '/clients/visits' do
+get '/clients/:client_id/visits' do
   # Pass along only the accepted MB parameters
-  query = params.slice(
-    'ClientID',
-    'StartDate',
-    'EndDate'
-  )
-
-  unless query['ClientID']
-    return[
-      400,
-      { 'Content-Type' => 'application/json;charset=utf-8' },
-      { error_message: 'ClientID required.' }.to_json
-    ]
-  end
+  query = params.slice('StartDate', 'EndDate')
+  query['ClientID'] = params[:client_id]
 
   # Make the MB API call
   client_visits = ClientService.get_client_visits(query)
@@ -253,21 +225,10 @@ get '/clients/visits' do
   body response.to_json
 end
 
-get '/clients/purchases' do
+get '/clients/:client_id/purchases' do
   # Pass along only the accepted MB parameters
-  query = params.slice(
-    'ClientID',
-    'StartDate',
-    'EndDate'
-  )
-
-  unless query['ClientID']
-    return[
-      400,
-      { 'Content-Type' => 'application/json;charset=utf-8' },
-      { error_message: 'ClientID required.' }.to_json
-    ]
-  end
+  query = params.slice('StartDate', 'EndDate')
+  query['ClientID'] = params[:client_id]
 
   # Make the MB API call
   client_purchases = ClientService.get_client_purchases(query)
@@ -279,21 +240,10 @@ get '/clients/purchases' do
   body response.to_json
 end
 
-get '/clients/schedule' do
+get '/clients/:client_id/schedule' do
   # Pass along only the accepted MB parameters
-  query = params.slice(
-    'ClientID',
-    'StartDate',
-    'EndDate'
-  )
-
-  unless query['ClientID']
-    return[
-      400,
-      { 'Content-Type' => 'application/json;charset=utf-8' },
-      { error_message: 'ClientID required.' }.to_json
-    ]
-  end
+  query = params.slice('StartDate', 'EndDate')
+  query['ClientID'] = params[:client_id]
 
   # Make the MB API call
   client_schedule = ClientService.get_client_schedule(query)
