@@ -39,9 +39,19 @@ http_interactions:
       Content-Length:
       - '5040'
       Date:
-      - Thu, 22 Jan 2015 21:14:33 GMT
+      - Fri, 23 Jan 2015 01:33:15 GMT
       Connection:
       - keep-alive
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - Accept, SiteId, Authorization, Content-Type, Origin
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Origin:
+      - ''
     body:
       encoding: UTF-8
       string: '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
@@ -79,5 +89,5 @@ http_interactions:
         (32)</Name></Size></Product><Product><Price>100.0000</Price><TaxRate>0.08</TaxRate><ID>123456</ID><GroupID>1420</GroupID><Name>Glove</Name><OnlinePrice>0.0000</OnlinePrice><ShortDesc>Rawlings
         Gold Glove Series</ShortDesc><Color><ID>1</ID><Name>None</Name></Color><Size><ID>4</ID><Name>Large</Name></Size></Product></Products></GetProductsResult></GetProductsResponse></soap:Body></soap:Envelope>'
     http_version: 
-  recorded_at: Thu, 22 Jan 2015 21:14:33 GMT
+  recorded_at: Fri, 23 Jan 2015 01:33:15 GMT
 recorded_with: VCR 2.9.3

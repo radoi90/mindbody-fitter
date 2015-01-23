@@ -22,7 +22,7 @@ describe 'Mindbody Wrapper Classes' do
 
   it 'should get 1 class when PageSize is 1' do
     get '/classes?PageSize=1'
-    last_response.headers['Result count'].to_i.must_equal 1
+    last_response.headers['Result-Count'].to_i.must_equal 1
   end
 
   it 'should get classes within a date interval' do
@@ -35,7 +35,7 @@ describe 'Mindbody Wrapper Classes' do
 
     get('/classes?StartDateTime=' + jan_22s + '&EndDateTime=' + jan_23s)
 
-    first_class = JSON.parse(last_response.body).first
+    first_class = JSON.parse(last_response.body)['classes'].first
     Date.strptime(first_class['start_date_time']).must_be :>=, jan_22
     Date.strptime(first_class['end_date_time']).must_be :<=, jan_23
   end

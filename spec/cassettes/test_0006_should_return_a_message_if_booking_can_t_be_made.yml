@@ -39,9 +39,19 @@ http_interactions:
       Content-Length:
       - '4644'
       Date:
-      - Thu, 22 Jan 2015 21:14:38 GMT
+      - Fri, 23 Jan 2015 01:33:07 GMT
       Connection:
       - keep-alive
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - Accept, SiteId, Authorization, Content-Type, Origin
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Origin:
+      - ''
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\"
@@ -78,5 +88,5 @@ http_interactions:
         M Hadad</Name><FirstName>Jackie M</FirstName><LastName>Hadad</LastName><Bio>
         </Bio><isMale>false</isMale></Staff></Class></Classes></AddClientsToClassesResult></AddClientsToClassesResponse></soap:Body></soap:Envelope>"
     http_version: 
-  recorded_at: Thu, 22 Jan 2015 21:14:38 GMT
+  recorded_at: Fri, 23 Jan 2015 01:33:08 GMT
 recorded_with: VCR 2.9.3

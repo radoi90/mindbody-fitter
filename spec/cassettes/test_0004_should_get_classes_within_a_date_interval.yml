@@ -39,9 +39,19 @@ http_interactions:
       Content-Length:
       - '4696'
       Date:
-      - Thu, 22 Jan 2015 21:14:35 GMT
+      - Fri, 23 Jan 2015 01:33:09 GMT
       Connection:
       - keep-alive
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Allow-Headers:
+      - Accept, SiteId, Authorization, Content-Type, Origin
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Origin:
+      - ''
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
@@ -76,5 +86,5 @@ http_interactions:
         Duff</Name><FirstName>Diana</FirstName><LastName>Duff</LastName><Bio>Diana
         is an excellent swimmer!!</Bio><isMale>true</isMale></Staff></Class></Classes></GetClassesResult></GetClassesResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Thu, 22 Jan 2015 21:14:35 GMT
+  recorded_at: Fri, 23 Jan 2015 01:33:09 GMT
 recorded_with: VCR 2.9.3
