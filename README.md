@@ -3,13 +3,12 @@
 [![Build Status](https://magnum.travis-ci.com/radoi90/mindbody-fitter.svg?token=h7yztF3b263no45wNybc&branch=master)](https://magnum.travis-ci.com/radoi90/mindbody-fitter)
 [![Code Climate](https://codeclimate.com/repos/54c1657ae30ba06a85003f57/badges/3e7aaf94542b72f7f3bb/gpa.svg)](https://codeclimate.com/repos/54c1657ae30ba06a85003f57/feed)
 [![Test Coverage](https://codeclimate.com/repos/54c1657ae30ba06a85003f57/badges/3e7aaf94542b72f7f3bb/coverage.svg)](https://codeclimate.com/repos/54c1657ae30ba06a85003f57/feed)
-[![Dependency Status](https://gemnasium.com/nickcharlton/urbanscraper.svg)](https://gemnasium.com/nickcharlton/urbanscraper)
 
 [MINDBODY][] provides a SOAP based API. This is a RESTful wrapper around some of the main MINDBODY functionality.
 
 This is built for the Fitter iOS app, as a means to integrate MINDBODY data from
-affiliated clients. It allows for customer, schedule and location data to be pulled into
-the Fitter web-service.
+affiliated clients. It allows the Fitter web-service to programatically pull in 
+customer, schedule and location MINDBODY data and to schedule class appointments.
 
 The [live version][] is hosted on [Heroku][]. It's a simple [Sinatra][] application, 
 re-routing RESTful calls to MINDBODY's SOAP API, through the Ruby [mindbody-api][] gem.
