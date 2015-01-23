@@ -10,6 +10,7 @@ end
 # Filters
 #
 before do
+  puts request
   # we'll always return json
   content_type :json, 'charset' => 'utf-8'
 end
@@ -58,10 +59,7 @@ end
 
 post '/classes/:class_id/add_client/:client_id' do
   # Pass along only the accepted MB parameters
-  query = params.slice(
-    'Test',
-    'RequirePayment'
-  )
+  query = params.slice('Test', 'RequirePayment')
 
   unless query['Test'] && query['RequirePayment']
     return [
@@ -78,13 +76,7 @@ post '/classes/:class_id/add_client/:client_id' do
   query['ClassIDs'] = Array(params[:class_id])
 
   # Make the MB API call
-  booked_classes = ClassService.add_clients_to_classes(query)
-  response = booked_classes.result[:classes]
-
-  # Build the response
-  status booked_classes.error_code
-  headers 'Result-Count' => response.size.to_s
-  body response.to_json
+  @result = ClassService.add_clients_to_classes(query)
 end
 
 #

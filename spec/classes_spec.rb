@@ -51,6 +51,6 @@ describe 'Mindbody Wrapper Classes' do
          Test: true, RequirePayment: false
 
     reply_body = JSON.parse(last_response.body)
-    reply_body['clients']['messages'].wont_be_nil
+    reply_body['classes']['clients']['messages'].wont_be_nil
   end
 end
