@@ -1,6 +1,10 @@
 require 'sinatra'
+require 'redcarpet'
+require 'pygments'
 require 'json'
 require './lib/mind_body_integration'
+
+require_relative 'helpers/markdown'
 
 configure :production do
   require 'newrelic_rpm'
@@ -10,18 +14,20 @@ end
 # Filters
 #
 before do
-  puts request
   # we'll always return json
   content_type :json, 'charset' => 'utf-8'
 end
 
 after do
-  halt 400 unless @result
+  # build response if returning a MINDBODY result
+  if request.path != '/'
+    halt 400 unless @result
 
-  # Build the response
-  status @result.error_code
-  headers 'Result-Count' => @result.result_count.to_s
-  body @result.result.to_json
+    # Build the response
+    status @result.error_code
+    headers 'Result-Count' => @result.result_count.to_s
+    body @result.result.to_json
+  end
 end
 
 #
@@ -105,12 +111,10 @@ end
 # Client Service routes
 #
 
-get '/clients' do
-  halt 400, { error: 'ClientID required.' }.to_json unless params[:ClientID]
-
+get '/clients/:client_id' do
   # Make the MB API call
   @result = ClientService.get_clients(
-    'ClientIDs' => { 'string' => params[:ClientID] }
+    'ClientIDs' => { 'string' => params[:client_id] }
   )
 end
 
@@ -118,9 +122,17 @@ end
   get('/clients/:client_id/' + path) do
     # Pass along only the accepted MB parameters
     query = params.slice('StartDate', 'EndDate')
-    query['ClientID'] = params[:client_id]
 
     # Make the MB API call
-    @result = ClientService.send('get_client_' + path, query)
+    @result = ClientService.send('get_client_' + path,
+                                 { 'string' => params[:client_id] },
+                                 query)
   end
+end
+
+#
+# Error Handling
+#
+not_found do
+  { message: 'Route not found. Check your syntax.' }.to_json
 end

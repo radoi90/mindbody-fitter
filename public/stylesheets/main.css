@@ -1,0 +1,27 @@
+body {
+    font: normal 120%/1.6 "Lucida Grande", sans-serif;
+    margin: 1.0416667%; /* 10px / 960px */
+    width: 60%;
+    background-color: #FFFFFF;
+    padding: 1.0416667%; /* 10px / 960px */
+}
+
+.smallcaps {
+    font-variant: small-caps;
+    font-size: 0.5em; /* 10px / 16px */
+}
+
+pre {
+    overflow: auto;
+    font-size: 0.75em;
+    margin: 0;
+    padding: 1.5625%; /* 15px / 960px */
+}
+
+div.highlight {
+    background-color: #F9F9F9;
+}
+
+div.headers {
+    background-color: #F3F3F3;
+}
